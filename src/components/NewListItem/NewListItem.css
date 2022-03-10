@@ -1,0 +1,33 @@
+.newlist-container{
+  width:40%;
+  margin:1%;
+  text-align: left;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.newlist-container  div{
+    margin-right:20px;
+    padding:5px;
+}
+.form-inputs {
+    display: flex;
+    flex-flow: column wrap;
+    margin:4px;
+}
+.form-inputs > div{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    align-content: space-between;
+}
+label{
+    text-align: left;
+}
+button{
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: white;
+}

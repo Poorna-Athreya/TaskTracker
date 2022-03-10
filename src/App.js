@@ -4,9 +4,9 @@ import './App.css';
 import List from './components/Lists/List';
 import NewListItem from './components/NewListItem/NewListItem';
 const INITIAL_DUMMY_LISTS = [
-  { id:1, title: 'Grocery List', description: 'Get items from the grocery store' },
-  { id:2, title: 'Bills Pending', description: 'Monthly bills to pay' },
-  { id:3, title: 'Exam chapters', description: 'Chapters to study for exam' },
+  { id:1, title: 'Grocery List', description: 'Get items from the grocery store', hours: 2},
+  { id:2, title: 'Bills Pending', description: 'Monthly bills to pay', hours: 10},
+  { id:3, title: 'Exam chapters', description: 'Chapters to study for exam', hours: 60 },
 ];
 function App() {
   const [listItems, setListItems] = useState(INITIAL_DUMMY_LISTS);
