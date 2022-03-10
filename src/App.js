@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
+import './App.css';
+import List from './components/Lists/List';
+import NewListItem from './components/NewListItem/NewListItem';
+const INITIAL_DUMMY_LISTS = [
+  { id:1, title: 'Grocery List', description: 'Get items from the grocery store' },
+  { id:2, title: 'Bills Pending', description: 'Monthly bills to pay' },
+  { id:3, title: 'Exam chapters', description: 'Chapters to study for exam' },
+];
 function App() {
+  const [listItems, setListItems] = useState(INITIAL_DUMMY_LISTS);
+  const saveNewListData = (newListData) => {
+    const newListDataWrite = {...newListData};
+    newListDataWrite.id = listItems.length+1;
+    console.log("New ",newListDataWrite);
+    setListItems([...listItems,newListDataWrite]);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <List listItems={listItems} />
+      <NewListItem onSaveNewListData= {saveNewListData} />
     </div>
   );
 }
