@@ -3,7 +3,7 @@ import "./NewListItem.css";
 function NewListItem(props) {
   const [newTitle, setNewTitle] = useState('');
   const [newDescription, setNewDescription] = useState('');
-  const [newHours, setNewHours] = useState('');
+  const [newHours, setNewHours] = useState(0);
   const submitHandler = (event) => {
     event.preventDefault();
     const newListItem = {
